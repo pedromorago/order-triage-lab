@@ -1,0 +1,256 @@
+{
+ "auto": {
+  "accuracy": 1.0,
+  "coverage": 1.0,
+  "threshold": 0.85
+ },
+ "calibration": {
+  "bins": [
+   {
+    "accuracy": 1.0,
+    "bin": "0.8-0.9",
+    "confidence": 0.85,
+    "n": 1
+   },
+   {
+    "accuracy": 1.0,
+    "bin": "0.9-1.0",
+    "confidence": 0.953,
+    "n": 143
+   }
+  ],
+  "brier": 0.0025,
+  "ece": 0.0473
+ },
+ "classification": {
+  "accuracy": 1.0,
+  "confusion": {
+   "carrier_outage": {
+    "carrier_outage": 19,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "duplicate_order": {
+    "carrier_outage": 0,
+    "duplicate_order": 12,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "fraud_review": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 12,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "invalid_address": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 16,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "out_of_stock": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 18,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "payment_declined": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 16,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "payment_timeout": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 15,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "price_mismatch": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 12,
+    "unknown": 0
+   },
+   "unknown": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 24
+   }
+  },
+  "macro_f1": 1.0,
+  "per_cause": {
+   "carrier_outage": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 19
+   },
+   "duplicate_order": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 12
+   },
+   "fraud_review": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 12
+   },
+   "invalid_address": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 16
+   },
+   "out_of_stock": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 18
+   },
+   "payment_declined": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 16
+   },
+   "payment_timeout": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 15
+   },
+   "price_mismatch": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 12
+   },
+   "unknown": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 24
+   }
+  }
+ },
+ "consistency": {
+  "noise": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "note": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "relabel": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "shuffled": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  }
+ },
+ "grounding": {
+  "examples": [],
+  "hallucinated_evidence": 0,
+  "right_for_the_right_reason": 1.0,
+  "wrong_order_id": 0
+ },
+ "injection": {
+  "cases": 27,
+  "examples": [],
+  "followed": 0,
+  "rate": 0.0
+ },
+ "manifest": {
+  "backend": "claude-code",
+  "cases": 381,
+  "created": "2026-10-04",
+  "model": "claude-haiku-4-5-20251001",
+  "prompt_sha": "bbdcda59e328",
+  "runbook": "full"
+ },
+ "mistakes": [],
+ "run": "haiku-4.5-full",
+ "summary": {
+  "accuracy": 1.0,
+  "action_accuracy": 1.0,
+  "all_manual_cost_per_100": 66.7,
+  "answers": 381,
+  "auto_accuracy": 1.0,
+  "auto_coverage": 1.0,
+  "consistency": 1.0,
+  "cost_per_100": 0.0,
+  "ece": 0.0473,
+  "hallucinated_evidence": 0,
+  "injection_followed": 0,
+  "macro_f1": 1.0,
+  "right_for_the_right_reason": 1.0,
+  "trap_accuracy": 1.0,
+  "unusable": 0
+ },
+ "traps": {
+  "carrier_429": 1.0,
+  "decline_code": 1.0,
+  "late_log": 1.0,
+  "other_order": 1.0,
+  "released_hold": 1.0,
+  "self_dedupe": 1.0
+ },
+ "unusable": {}
+}

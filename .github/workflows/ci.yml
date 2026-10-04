@@ -32,12 +32,12 @@ jobs:
           git diff --stat --exit-code -- runs
           { echo "## Recorded runs"; echo; triage report runs/*/; } >> "$GITHUB_STEP_SUMMARY"
       - name: Regression gate
-        run: triage gate runs/sonnet-5.5
+        run: triage gate runs/sonnet-5.5-full --baseline runs/haiku-4.5-full
       - name: Regression gate demo (expected to fail)
         run: |
           set +e
-          triage gate runs/haiku-4.5 --baseline runs/sonnet-5.5 | tee gate.txt
+          triage gate runs/sonnet-5.5-short --baseline runs/sonnet-5.5-full | tee gate.txt
           code=${PIPESTATUS[0]}
           set -e
           test "$code" -eq 1
-          { echo "## Gate demo: switching to the smaller model (expected to fail)"; echo; echo '```'; cat gate.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          { echo "## Gate demo: the short runbook against the full one (expected to fail)"; echo; echo '```'; cat gate.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

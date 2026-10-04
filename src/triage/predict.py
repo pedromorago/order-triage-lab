@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from importlib import resources
 from pathlib import Path
 
-from . import RUNBOOK
+from . import ROOT
 from .backends import BACKENDS
 from .baselines import BASELINES
 from .cases import Case
@@ -24,12 +24,15 @@ def template(name: str) -> str:
     return resources.files("triage").joinpath("prompts", name).read_text()
 
 
-def build_prompt(case: Case) -> str:
-    return template("user.txt").format(runbook=RUNBOOK.read_text().strip(), case=case.text())
+RUNBOOKS = {"full": ROOT / "RUNBOOK.md", "short": ROOT / "RUNBOOK_SHORT.md"}
 
 
-def prompt_sha() -> str:
-    return hashlib.sha256((template("system.txt") + template("user.txt") + RUNBOOK.read_text()).encode()).hexdigest()[:12]
+def build_prompt(case: Case, runbook: str = "full") -> str:
+    return template("user.txt").format(runbook=RUNBOOKS[runbook].read_text().strip(), case=case.text())
+
+
+def prompt_sha(runbook: str = "full") -> str:
+    return hashlib.sha256((template("system.txt") + template("user.txt") + RUNBOOKS[runbook].read_text()).encode()).hexdigest()[:12]
 
 
 def done_ids(path: Path) -> set[str]:
@@ -38,13 +41,13 @@ def done_ids(path: Path) -> set[str]:
     return {json.loads(line)["case"] for line in path.read_text().splitlines() if line.strip()}
 
 
-def predict(out: Path, cases: list[Case], backend: str, model: str | None = None, parallel: int = 6) -> None:
+def predict(out: Path, cases: list[Case], backend: str, model: str | None = None, parallel: int = 6, runbook: str = "full") -> None:
     out.mkdir(parents=True, exist_ok=True)
     path = out / "predictions.jsonl"
     manifest = out / "manifest.json"
     if not manifest.exists():
         manifest.write_text(json.dumps({
-            "backend": backend, "model": model, "prompt_sha": prompt_sha(),
+            "backend": backend, "model": model, "runbook": runbook, "prompt_sha": prompt_sha(runbook),
             "created": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "cases": len(cases),
         }, indent=2) + "\n")
     todo = [c for c in cases if c.id not in done_ids(path)]
@@ -60,7 +63,7 @@ def predict(out: Path, cases: list[Case], backend: str, model: str | None = None
         system = template("system.txt").strip()
 
         def one(case: Case) -> dict:
-            done = client.complete(system, build_prompt(case))
+            done = client.complete(system, build_prompt(case, runbook))
             return {"case": case.id, "raw": done.text, "served_model": done.model, "seconds": done.seconds,
                     "output_tokens": done.output_tokens}
 

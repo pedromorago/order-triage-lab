@@ -23,6 +23,7 @@ def main(argv: list[str] | None = None) -> int:
     pr.add_argument("--model")
     pr.add_argument("--limit", type=int, help="only the first N cases")
     pr.add_argument("--parallel", type=int, default=6)
+    pr.add_argument("--runbook", default="full", choices=["full", "short"], help="the runbook the model gets")
 
     e = sub.add_parser("evaluate", help="evaluate recorded runs and write results.json in each")
     e.add_argument("runs", type=Path, nargs="+")
@@ -55,7 +56,7 @@ def main(argv: list[str] | None = None) -> int:
         from .predict import predict
 
         cases = load(DATA)
-        predict(a.out, cases[: a.limit] if a.limit else cases, a.backend, a.model, a.parallel)
+        predict(a.out, cases[: a.limit] if a.limit else cases, a.backend, a.model, a.parallel, a.runbook)
         return 0
 
     if a.cmd == "evaluate":

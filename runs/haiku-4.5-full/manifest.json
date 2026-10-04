@@ -1,0 +1,8 @@
+{
+  "backend": "claude-code",
+  "model": "claude-haiku-4-5-20251001",
+  "runbook": "full",
+  "prompt_sha": "bbdcda59e328",
+  "created": "2026-10-04",
+  "cases": 381
+}

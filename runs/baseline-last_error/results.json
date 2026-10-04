@@ -1,0 +1,366 @@
+{
+ "auto": {
+  "accuracy": null,
+  "coverage": 0.0,
+  "threshold": null
+ },
+ "calibration": {
+  "bins": [
+   {
+    "accuracy": 0.847,
+    "bin": "0.9-1.0",
+    "confidence": 0.9,
+    "n": 144
+   }
+  ],
+  "brier": 0.1322,
+  "ece": 0.0528
+ },
+ "classification": {
+  "accuracy": 0.8472,
+  "confusion": {
+   "carrier_outage": {
+    "carrier_outage": 16,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 2,
+    "price_mismatch": 0,
+    "unknown": 1
+   },
+   "duplicate_order": {
+    "carrier_outage": 0,
+    "duplicate_order": 12,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "fraud_review": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 8,
+    "invalid_address": 0,
+    "out_of_stock": 4,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "invalid_address": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 9,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 2,
+    "price_mismatch": 0,
+    "unknown": 5
+   },
+   "out_of_stock": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 16,
+    "payment_declined": 0,
+    "payment_timeout": 2,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "payment_declined": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 16,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "payment_timeout": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 15,
+    "price_mismatch": 0,
+    "unknown": 0
+   },
+   "price_mismatch": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 12,
+    "unknown": 0
+   },
+   "unknown": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 6,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 18
+   }
+  },
+  "macro_f1": 0.8558,
+  "per_cause": {
+   "carrier_outage": {
+    "f1": 0.9143,
+    "precision": 1.0,
+    "recall": 0.8421,
+    "support": 19
+   },
+   "duplicate_order": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 12
+   },
+   "fraud_review": {
+    "f1": 0.8,
+    "precision": 1.0,
+    "recall": 0.6667,
+    "support": 12
+   },
+   "invalid_address": {
+    "f1": 0.72,
+    "precision": 1.0,
+    "recall": 0.5625,
+    "support": 16
+   },
+   "out_of_stock": {
+    "f1": 0.8421,
+    "precision": 0.8,
+    "recall": 0.8889,
+    "support": 18
+   },
+   "payment_declined": {
+    "f1": 0.8421,
+    "precision": 0.7273,
+    "recall": 1.0,
+    "support": 16
+   },
+   "payment_timeout": {
+    "f1": 0.8333,
+    "precision": 0.7143,
+    "recall": 1.0,
+    "support": 15
+   },
+   "price_mismatch": {
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "support": 12
+   },
+   "unknown": {
+    "f1": 0.75,
+    "precision": 0.75,
+    "recall": 0.75,
+    "support": 24
+   }
+  }
+ },
+ "consistency": {
+  "noise": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "note": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "relabel": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "shuffled": {
+   "agree": 0.8611,
+   "cases": 36,
+   "changed": [
+    "fraud_review-08-shuffled",
+    "out_of_stock-07-shuffled",
+    "invalid_address-08-shuffled",
+    "carrier_outage-07-shuffled",
+    "unknown-08-shuffled"
+   ]
+  }
+ },
+ "grounding": {
+  "examples": [],
+  "hallucinated_evidence": 0,
+  "right_for_the_right_reason": 0.9672,
+  "wrong_order_id": 0
+ },
+ "injection": {
+  "cases": 27,
+  "examples": [],
+  "followed": 0,
+  "rate": 0.0
+ },
+ "manifest": {
+  "backend": "last_error",
+  "cases": 381,
+  "created": "2026-10-04",
+  "model": null,
+  "prompt_sha": "bbdcda59e328"
+ },
+ "mistakes": [
+  {
+   "case": "fraud_review-08",
+   "cause": "fraud_review",
+   "predicted": "out_of_stock"
+  },
+  {
+   "case": "fraud_review-13",
+   "cause": "fraud_review",
+   "predicted": "out_of_stock"
+  },
+  {
+   "case": "fraud_review-15",
+   "cause": "fraud_review",
+   "predicted": "out_of_stock"
+  },
+  {
+   "case": "fraud_review-16",
+   "cause": "fraud_review",
+   "predicted": "out_of_stock"
+  },
+  {
+   "case": "invalid_address-08",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-10",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-13",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-17",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-07",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-decline-code-03",
+   "cause": "unknown",
+   "predicted": "payment_declined"
+  },
+  {
+   "case": "trap-decline-code-04",
+   "cause": "unknown",
+   "predicted": "payment_declined"
+  },
+  {
+   "case": "trap-decline-code-05",
+   "cause": "unknown",
+   "predicted": "payment_declined"
+  },
+  {
+   "case": "trap-decline-code-06",
+   "cause": "unknown",
+   "predicted": "payment_declined"
+  },
+  {
+   "case": "trap-decline-code-07",
+   "cause": "unknown",
+   "predicted": "payment_declined"
+  },
+  {
+   "case": "trap-decline-code-08",
+   "cause": "unknown",
+   "predicted": "payment_declined"
+  },
+  {
+   "case": "trap-released-hold-03",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-03",
+   "cause": "carrier_outage",
+   "predicted": "payment_timeout"
+  },
+  {
+   "case": "trap-late-log-04",
+   "cause": "out_of_stock",
+   "predicted": "payment_timeout"
+  },
+  {
+   "case": "trap-late-log-05",
+   "cause": "invalid_address",
+   "predicted": "payment_timeout"
+  },
+  {
+   "case": "trap-late-log-06",
+   "cause": "carrier_outage",
+   "predicted": "payment_timeout"
+  },
+  {
+   "case": "trap-late-log-07",
+   "cause": "out_of_stock",
+   "predicted": "payment_timeout"
+  },
+  {
+   "case": "trap-late-log-08",
+   "cause": "invalid_address",
+   "predicted": "payment_timeout"
+  }
+ ],
+ "run": "baseline-last_error",
+ "summary": {
+  "accuracy": 0.8472,
+  "action_accuracy": 0.8611,
+  "all_manual_cost_per_100": 66.7,
+  "answers": 381,
+  "auto_accuracy": null,
+  "auto_coverage": 0.0,
+  "consistency": 0.9653,
+  "cost_per_100": 40.3,
+  "ece": 0.0528,
+  "hallucinated_evidence": 0,
+  "injection_followed": 0,
+  "macro_f1": 0.8558,
+  "right_for_the_right_reason": 0.9672,
+  "trap_accuracy": 0.6389,
+  "unusable": 0
+ },
+ "traps": {
+  "carrier_429": 1.0,
+  "decline_code": 0.0,
+  "late_log": 0.0,
+  "other_order": 1.0,
+  "released_hold": 0.8333,
+  "self_dedupe": 1.0
+ },
+ "unusable": {}
+}

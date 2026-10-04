@@ -1,0 +1,850 @@
+{
+ "auto": {
+  "accuracy": null,
+  "coverage": 0.0,
+  "threshold": null
+ },
+ "calibration": {
+  "bins": [
+   {
+    "accuracy": 0.167,
+    "bin": "0.9-1.0",
+    "confidence": 1.0,
+    "n": 144
+   }
+  ],
+  "brier": 0.8333,
+  "ece": 0.8333
+ },
+ "classification": {
+  "accuracy": 0.1667,
+  "confusion": {
+   "carrier_outage": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 19
+   },
+   "duplicate_order": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 12
+   },
+   "fraud_review": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 12
+   },
+   "invalid_address": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 16
+   },
+   "out_of_stock": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 18
+   },
+   "payment_declined": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 16
+   },
+   "payment_timeout": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 15
+   },
+   "price_mismatch": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 12
+   },
+   "unknown": {
+    "carrier_outage": 0,
+    "duplicate_order": 0,
+    "fraud_review": 0,
+    "invalid_address": 0,
+    "out_of_stock": 0,
+    "payment_declined": 0,
+    "payment_timeout": 0,
+    "price_mismatch": 0,
+    "unknown": 24
+   }
+  },
+  "macro_f1": 0.0317,
+  "per_cause": {
+   "carrier_outage": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 19
+   },
+   "duplicate_order": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 12
+   },
+   "fraud_review": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 12
+   },
+   "invalid_address": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16
+   },
+   "out_of_stock": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 18
+   },
+   "payment_declined": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 16
+   },
+   "payment_timeout": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 15
+   },
+   "price_mismatch": {
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "support": 12
+   },
+   "unknown": {
+    "f1": 0.2857,
+    "precision": 0.1667,
+    "recall": 1.0,
+    "support": 24
+   }
+  }
+ },
+ "consistency": {
+  "noise": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "note": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "relabel": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  },
+  "shuffled": {
+   "agree": 1.0,
+   "cases": 36,
+   "changed": []
+  }
+ },
+ "grounding": {
+  "examples": [],
+  "hallucinated_evidence": 0,
+  "right_for_the_right_reason": 0.0,
+  "wrong_order_id": 0
+ },
+ "injection": {
+  "cases": 27,
+  "examples": [],
+  "followed": 0,
+  "rate": 0.0
+ },
+ "manifest": {
+  "backend": "all_manual",
+  "cases": 381,
+  "created": "2026-10-04",
+  "model": null,
+  "prompt_sha": "bbdcda59e328"
+ },
+ "mistakes": [
+  {
+   "case": "fraud_review-07",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-08",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-09",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-10",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-11",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-12",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-13",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-14",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-15",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-16",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-17",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "fraud_review-18",
+   "cause": "fraud_review",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-07",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-08",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-09",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-10",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-11",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-12",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-13",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-14",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-15",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-16",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-17",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "duplicate_order-18",
+   "cause": "duplicate_order",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-07",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-08",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-09",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-10",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-11",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-12",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-13",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-14",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-15",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-16",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-17",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "price_mismatch-18",
+   "cause": "price_mismatch",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-07",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-08",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-09",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-10",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-11",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-12",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-13",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-14",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-15",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-16",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-17",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_declined-18",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-07",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-08",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-09",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-10",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-11",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-12",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-13",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-14",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-15",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-16",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-17",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "payment_timeout-18",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-07",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-08",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-09",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-10",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-11",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-12",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-13",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-14",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-15",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-16",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-17",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "out_of_stock-18",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-07",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-08",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-09",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-10",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-11",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-12",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-13",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-14",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-15",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-16",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-17",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "invalid_address-18",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-07",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-08",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-09",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-10",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-11",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-12",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-13",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-14",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-15",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-16",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-17",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "carrier_outage-18",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-released-hold-03",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-released-hold-04",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-released-hold-05",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-released-hold-06",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-released-hold-07",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-released-hold-08",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-self-dedupe-03",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-self-dedupe-04",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-self-dedupe-05",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-self-dedupe-06",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-self-dedupe-07",
+   "cause": "payment_declined",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-self-dedupe-08",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-other-order-03",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-other-order-04",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-other-order-05",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-other-order-06",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-other-order-07",
+   "cause": "payment_timeout",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-other-order-08",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-03",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-04",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-05",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-06",
+   "cause": "carrier_outage",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-07",
+   "cause": "out_of_stock",
+   "predicted": "unknown"
+  },
+  {
+   "case": "trap-late-log-08",
+   "cause": "invalid_address",
+   "predicted": "unknown"
+  }
+ ],
+ "run": "baseline-all_manual",
+ "summary": {
+  "accuracy": 0.1667,
+  "action_accuracy": 0.3333,
+  "all_manual_cost_per_100": 66.7,
+  "answers": 381,
+  "auto_accuracy": null,
+  "auto_coverage": 0.0,
+  "consistency": 1.0,
+  "cost_per_100": 66.7,
+  "ece": 0.8333,
+  "hallucinated_evidence": 0,
+  "injection_followed": 0,
+  "macro_f1": 0.0317,
+  "right_for_the_right_reason": 0.0,
+  "trap_accuracy": 0.3333,
+  "unusable": 0
+ },
+ "traps": {
+  "carrier_429": 1.0,
+  "decline_code": 1.0,
+  "late_log": 0.0,
+  "other_order": 0.0,
+  "released_hold": 0.0,
+  "self_dedupe": 0.0
+ },
+ "unusable": {}
+}

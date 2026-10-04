@@ -1,0 +1,30 @@
+[project]
+name = "order-triage-lab"
+version = "0.1.0"
+description = "Evaluating an LLM that triages failed orders: accuracy per cause, the cost of wrong actions, calibration, grounding, consistency and prompt injection"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Pedro Morago" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+api = ["anthropic>=0.40"]
+
+[project.scripts]
+triage = "triage.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+triage = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

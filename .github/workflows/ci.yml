@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - name: The cases are reproducible from their seed
+        run: triage cases --check
+      - name: Tests
+        run: pytest -q
+      - name: Seeded bugs in the evaluator
+        run: |
+          python scripts/run_seeded_bugs.py | tee seeded.md
+          { echo "## Seeded bugs in the evaluator"; echo; cat seeded.md; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Re-evaluate the recorded runs
+        # No model is called: the answers are in runs/. The committed results must come out the same.
+        run: |
+          triage evaluate runs/*/
+          git diff --stat --exit-code -- runs
+          { echo "## Recorded runs"; echo; triage report runs/*/; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Regression gate
+        run: triage gate runs/sonnet-5.5
+      - name: Regression gate demo (expected to fail)
+        run: |
+          set +e
+          triage gate runs/haiku-4.5 --baseline runs/sonnet-5.5 | tee gate.txt
+          code=${PIPESTATUS[0]}
+          set -e
+          test "$code" -eq 1
+          { echo "## Gate demo: switching to the smaller model (expected to fail)"; echo; echo '```'; cat gate.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"

@@ -1,4 +1,4 @@
-"""The models that write the tests.
+"""The model backends that triage the orders.
 
 Two ways to call one: the Claude Code CLI in print mode (claude -p), which
 runs on a Claude subscription, and the Anthropic API, which needs
